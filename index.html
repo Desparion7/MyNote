@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MyNote</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Montserrat:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/efe1cde7b5.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<div class="menu">
+			<h1><i class="fa-regular fa-sticky-note"></i>MyNote</h1>
+			<div class="menu-buttons">
+				<button class="menu-button add-note">
+					<i class="fa-solid fa-plus"></i>Dodaj
+				</button>
+				<button class="menu-button remove-all-note">
+					<i class="fa-solid fa-trash-can"></i> Usuń wszystkie
+				</button>
+			</div>
+		</div>
+		<div class="note-area"></div>
+		<div class="panel">
+			<h1>Dodaj Notatkę</h1>
+			<label for="category">Wybierz kategorię:</label>
+			<select id="category" onchange="selectValue()">
+				<option value="0" disabled selected>Wybierz kategorię</option>
+				<option value="1">Zakupy</option>
+				<option value="1">Praca</option>
+				<option value="1">Inne</option>
+			</select>
+			<label for="text">Wypisz treść notatki:</label>
+
+			<textarea id="text"></textarea>
+			<div class="panel-buttons">
+				<button class="panel-button save">
+					<i class="fa-solid fa-floppy-disk"></i>Zapisz
+				</button>
+				<button class="panel-button cancel">
+					<i class="fa-solid fa-circle-xmark"></i>Anuluj
+				</button>
+			</div>
+			<p class="error">Wpisz treść notatki</p>
+		</div>
+		<div class="delete-alert">
+			<h2>Czy na pewno chcesz usunać wszystkie notatki?</h2>
+			<div class="alert-buttons-box">
+				<button class="yes-button alert-button">TAK</button>
+				<button class="no-button alert-button">NIE</button>
+			</div>
+		</div>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>
